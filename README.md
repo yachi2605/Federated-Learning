@@ -1,7 +1,7 @@
 # 🧠 Federated Learning and AI Model Serving
 
 **Author:** Yachi Darji  
-** Check report : ** [Open PDF](./report/Report.pdf)
+**Check report :** [Open PDF](./report/Report.pdf)
 ---
 
 
