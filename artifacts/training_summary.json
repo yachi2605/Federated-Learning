@@ -1,0 +1,6 @@
+{
+  "final_test_accuracy": 66.47,
+  "final_test_loss": 1.3690515620799004,
+  "total_rounds": 251,
+  "model": "resnet18"
+}

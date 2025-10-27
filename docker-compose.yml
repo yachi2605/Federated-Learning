@@ -1,0 +1,30 @@
+services:
+  fl-training:
+    build: .
+    container_name: fl-training
+    working_dir: /app
+    command: python run.py
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./results:/app/results
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+
+  fl-webapp:
+    build: .
+    container_name: fl-webapp
+    working_dir: /app
+    command: uvicorn web_app.app:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./logs:/app/logs
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - fl-training
