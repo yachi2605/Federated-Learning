@@ -182,5 +182,4 @@ Once running, you should see:
 - A functional FastAPI UI showing top-5 image predictions on the same page.  
 
 ---
-# Federated-Learning
-# Federated-Learning
+
